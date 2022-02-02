@@ -8,6 +8,7 @@
     "start": "nx serve",
     "build": "nx build",
     "portfolio": "nx serve portfolio",
+    "portfolio-api": "nx serve portfolio-api",
     "test": "nx test"
   },
   "private": true,

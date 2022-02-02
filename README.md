@@ -49,6 +49,8 @@ When using Nx, you can create multiple applications and libraries in the same wo
 
 ## Generate a library
 
+Run `nx g @nrwl/js:node my-new-library` to generate a node library.
+
 Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
