@@ -1,3 +1,5 @@
 {
-    "appService.showBuildDuringDeployPrompt": false
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/4ff209f9-9b52-41b0-998a-ba8d076da996/resourceGroups/portfolio-rg/providers/Microsoft.Web/sites/portfolio-services",
+    "appService.deploySubpath": "dist/apps/portfolio-api"
 }

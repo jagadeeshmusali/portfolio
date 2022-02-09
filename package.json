@@ -7,8 +7,11 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
+    "build:portfolio-api": "nx build portfolio-api --generatePackageJson=true",
+    "build:node-poc": "nx build node-poc --generatePackageJson=true",
     "portfolio": "nx serve portfolio",
     "portfolio-api": "nx serve portfolio-api",
+    "node-poc": "nx serve node-poc",
     "test": "nx test"
   },
   "private": true,
