@@ -3,16 +3,16 @@ import { profileFeature } from './user.reducer';
 
 
 export const profileSelector = createSelector(
-  profileFeature.selectProfileState,
-  (state) => state.profile
+  profileFeature.selectProfile,
+  (state) => state
 );
 
 export const loadingSelector = createSelector(
-  profileFeature.selectProfileState,
-  (state) => state.loading
+  profileFeature.selectLoading,
+  (state) => state
 );
 
 export const userSelector = createSelector(
-  profileFeature.selectProfileState,
-  (state) => state.profile?.user
+  profileFeature.selectProfile,
+  (state) => state.user
 );
