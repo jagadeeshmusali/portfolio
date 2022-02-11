@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/portfolio/data-access-user",
+  "sourceRoot": "libs/portfolio/data-access-user/src",
+  "prefix": "portfolio",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/portfolio/data-access-user"],
+      "options": {
+        "jestConfig": "libs/portfolio/data-access-user/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/portfolio/data-access-user/src/**/*.ts",
+          "libs/portfolio/data-access-user/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
