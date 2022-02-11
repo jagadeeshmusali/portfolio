@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/feature-home",
+  "sourceRoot": "libs/feature-home/src",
+  "prefix": "portfolio",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/feature-home"],
+      "options": {
+        "jestConfig": "libs/feature-home/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/feature-home/src/**/*.ts",
+          "libs/feature-home/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
