@@ -7,7 +7,7 @@ export const profileMock: Profile = {
   },
   "tagLine":"I design and code beautifully simple things, and I love what I do.",
   "greetingMessage":"Hi, I'm Jagadeesh. Nice to meet you.",
-  "aboutMe":"I am a Full-stack developer with a passion for learning and building things. I am currently working as a Full-stack developer at <a href='https://www.truelancer.com/' target='_blank'>TrueLancer</a> and I am also a mentor at <a href='https://www.codecademy.com/' target='_blank'>Code Academy</a>. I am also a member of <a href='https://www.meetup.com/' target='_blank'>Meetup</a> and <a href='https://www.facebook.com/groups/codecademy/' target='_blank'>Facebook Group</a>.",
+  "aboutMe":"Since beginning my journey as a freelance designer nearly 10 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.",
   "frontEndTechnologies":["Angular","Angularjs","Bootstrap","CSS","HTML","Javascript","Redux","Sass","Webpack"],
   "technologies":{
     "frontEnd":{
