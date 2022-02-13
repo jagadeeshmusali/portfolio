@@ -4294,14 +4294,21 @@ input[name="carousel"] { display: none; }
 
 .animate-fadeDown { -webkit-animation: fadeIn 2s, translate-down 0.75s; animation: fadeIn 2s, translate-down 0.75s; }
 
-@-webkit-keyframes "fadeIn" { from { opacity: 0; }
-  to { opacity: 1; } }
+.app-logo { content: url('./assets/jm-logo1.svg');}
 
-@-webkit-keyframes "translate-down" { 0% { -webkit-transform: translateY(-20px); transform: translateY(-20px); }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+.coding-logo { content: url('./assets/jm-coding.svg');}
 
-@-webkit-keyframes "translate-up" { 0% { -webkit-transform: translateY(40px); transform: translateY(40px); }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+.avtar-logo { content: url('./assets/jm-avatar.svg');}
+
+
+//@-webkit-keyframes "fadeIn" { from { opacity: 0; }
+//  to { opacity: 1; } }
+//
+//@-webkit-keyframes "translate-down" { 0% { -webkit-transform: translateY(-20px); transform: translateY(-20px); }
+//  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+//
+//@-webkit-keyframes "translate-up" { 0% { -webkit-transform: translateY(40px); transform: translateY(40px); }
+//  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
 
 .grecaptcha-badge { display: none; }
 /*# sourceMappingURL=main.css.map */

@@ -1,15 +1,3 @@
-<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-  <div class="container">
-    <div class="navbar-brand"><a class="navbar-item" href="/"><img src="img/mf-logo.svg"
-                                                                   alt="Jagadeesh Musali | Developer, Designer &amp; Mentor" height="48"></a><a class="navbar-burger"
-                                                                                                                                                     role="button" aria-label="menu" aria-expanded="false" data-target="#navMenu"><span
-      aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
-    <div class="navbar-menu" id="navMenu">
-      <div class="navbar-start"></div>
-      <div class="navbar-end"><a class="navbar-item" href="/mentorship.html">Mentorship</a>
-        <div class="navbar-item"><a class="button is-primary is-outlined is-rounded" href="/contact">Say Hello</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
+<portfolio-header></portfolio-header>
+<portfolio-intro [tagLine]="tagLine$ | async"></portfolio-intro>
+<portfolio-about-me [aboutMe]="aboutMe$ | async" [greetingMessage]="greetingMessage$ | async"></portfolio-about-me>
