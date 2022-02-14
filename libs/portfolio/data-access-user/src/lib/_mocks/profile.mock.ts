@@ -30,7 +30,13 @@ export const profileMock: Profile = {
       "technologies":["Azure"],
       "devTools":["Azure Portal","Azure CLI"]
     },
+    "mentor":{
+      "tagLine":"I believe in hard-work to get better each day myself, and love using that hardwork in helping fellow developers on their craft.",
+      "technologies":["Coding", "Best practices", "Freelancing"],
+      "devTools":["Coding patterns", "Best practices", "Designing", "Freelancing"]
+    },
     "versionControls":["Git","Github","TFS"]
   },
   "roles":["Front-end Developer","Back-end"]
 }
+

@@ -31,3 +31,8 @@ export const aboutMeSelector = createSelector(
   profileFeature.selectProfile,
   (state) => state.aboutMe
 );
+
+export const technologiesSelector = createSelector(
+  profileFeature.selectProfile,
+  (state) => state.technologies
+);

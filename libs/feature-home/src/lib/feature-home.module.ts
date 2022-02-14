@@ -1,10 +1,12 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
-import {PortfolioDataAccessUserModule, reducer, profileFeatureKey} from "@portfolio/portfolio/data-access-user";
+import {PortfolioDataAccessUserModule} from "@portfolio/portfolio/data-access-user";
 import { IntroComponent } from './components/intro/intro.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { SkillComponent } from './components/skills/skill/skill.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -14,8 +16,9 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     HomeComponent,
     IntroComponent,
     HeaderComponent,
-    AboutMeComponent
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
+    AboutMeComponent,
+    SkillsComponent,
+    SkillComponent
+  ]
 })
 export class FeatureHomeModule {}
