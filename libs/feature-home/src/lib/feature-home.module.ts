@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { SkillComponent } from './components/skills/skill/skill.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -18,7 +19,8 @@ import { SkillComponent } from './components/skills/skill/skill.component';
     HeaderComponent,
     AboutMeComponent,
     SkillsComponent,
-    SkillComponent
+    SkillComponent,
+    ProjectsComponent
   ]
 })
 export class FeatureHomeModule {}
