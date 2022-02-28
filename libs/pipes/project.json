@@ -1,0 +1,45 @@
+{
+  "projectType": "library",
+  "name": "ngx-angular-pipes",
+  "projectName": "ngx-angular-pipes",
+  "projectDescription": "Frequently used pipes for Angular applications",
+  "root": "libs/pipes",
+  "sourceRoot": "libs/pipes/src",
+  "prefix": "portfolio",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/pipes"],
+      "options": {
+        "project": "libs/pipes/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/pipes/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/pipes/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/pipes"],
+      "options": {
+        "jestConfig": "libs/pipes/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/pipes/src/**/*.ts",
+          "libs/pipes/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
