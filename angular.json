@@ -5,6 +5,7 @@
     "data-access-users": "libs/data-access-users",
     "feature-home": "libs/feature-home",
     "node-poc": "apps/node-poc",
+    "pipes": "libs/pipes",
     "portfolio": "apps/portfolio",
     "portfolio-api": "apps/portfolio-api",
     "portfolio-data-access-user": "libs/portfolio/data-access-user",

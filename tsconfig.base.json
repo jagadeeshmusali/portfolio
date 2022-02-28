@@ -22,7 +22,8 @@
       "@portfolio/feature-home": ["libs/feature-home/src/index.ts"],
       "@portfolio/portfolio/data-access-user": [
         "libs/portfolio/data-access-user/src/index.ts"
-      ]
+      ],
+      "ngx-angular-pipes": ["libs/pipes/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
