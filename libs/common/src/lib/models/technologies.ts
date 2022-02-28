@@ -5,5 +5,6 @@ export interface Technologies {
     backend: TechStack
     database: TechStack
     cloud: TechStack
+    mentor: TechStack
     versionControls: string[]
 }
