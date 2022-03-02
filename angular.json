@@ -3,6 +3,9 @@
   "projects": {
     "common": "libs/common",
     "data-access-users": "libs/data-access-users",
+    "fake-api": "libs/fake-api",
+    "fake-api-sample": "apps/fake-api-sample",
+    "fake-api-sample-e2e": "apps/fake-api-sample-e2e",
     "feature-home": "libs/feature-home",
     "node-poc": "apps/node-poc",
     "pipes": "libs/pipes",

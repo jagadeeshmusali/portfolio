@@ -11,6 +11,7 @@
     "build:node-poc": "nx build node-poc --generatePackageJson=true",
     "portfolio": "nx serve portfolio",
     "portfolio-api": "nx serve portfolio-api",
+    "fake-api-sample": "nx serve fake-api-sample",
     "node-poc": "nx serve node-poc",
     "build:pipes": "nx build pipes --configuration=production",
     "test": "nx test"
