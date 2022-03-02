@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/fake-api",
+  "sourceRoot": "libs/fake-api/src",
+  "prefix": "portfolio",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/fake-api"],
+      "options": {
+        "project": "libs/fake-api/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/fake-api/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/fake-api/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/fake-api"],
+      "options": {
+        "jestConfig": "libs/fake-api/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/fake-api/src/**/*.ts",
+          "libs/fake-api/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

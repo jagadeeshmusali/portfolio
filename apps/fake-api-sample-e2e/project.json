@@ -1,0 +1,28 @@
+{
+  "root": "apps/fake-api-sample-e2e",
+  "sourceRoot": "apps/fake-api-sample-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/fake-api-sample-e2e/cypress.json",
+        "devServerTarget": "fake-api-sample:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "fake-api-sample:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/fake-api-sample-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["fake-api-sample"]
+}
