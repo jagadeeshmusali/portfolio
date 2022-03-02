@@ -14,6 +14,7 @@
     "fake-api-sample": "nx serve fake-api-sample",
     "node-poc": "nx serve node-poc",
     "build:pipes": "nx build pipes --configuration=production",
+    "build:fake-api": "nx build fake-api --configuration=production",
     "test": "nx test"
   },
   "private": true,
