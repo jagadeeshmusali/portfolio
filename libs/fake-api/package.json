@@ -1,6 +1,9 @@
 {
   "name": "ngx-fake-api",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jagadeeshmusali/portfolio/tree/main/libs/fake-api"},
   "peerDependencies": {
     "@angular/common": "^13.1.0",
     "@angular/core": "^13.1.0"
