@@ -42,11 +42,13 @@ export const FAKE_API_CONFIG: FakeApiConfig = {
 
 `route` : The route that you would like to mock
 
+`delay` : The delay in milliseconds that you would like to apply to the response.
+
 `method` : The method that you would like to mock(get, post, put, delete)
 
 `response` : The response data that you would like to return
 
-`match` : The regex that you would like to match the route with
+`match` : The regex/pattern that you would like to match the route with
 
 > **Note:** If you dont pass any `match`, the `route` property will be used as the match. For example : `https://domain.com/user/all` will be matched with `route: '/user'`
 
