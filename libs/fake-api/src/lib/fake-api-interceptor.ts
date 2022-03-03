@@ -23,14 +23,14 @@ export class FakeBackendHttpInterceptor implements HttpInterceptor {
         const { url, method } = req;
         const mockedResponse = this.config.ApiResponseMappersList
         .find(val =>{
-          const matchType = val.matches ? url.match(val.matches) : url.includes(val.route)
+          const matchType = val.matches ? url.match(`${val.matches}$`) : url.includes(val.route)
           return matchType && method == val.method;
         });
         if (mockedResponse) {
             return of(new HttpResponse({ 
                 status: 200, body: mockedResponse.response 
             }))
-            .pipe(delay(500));
+            .pipe(delay(mockedResponse.delay || 0));
           }
           
         return next.handle(req);

@@ -2,7 +2,7 @@ import { ApiResponseMap } from "ngx-fake-api";
 
 export const fakeUsersResponse: ApiResponseMap = {
     route: '/user',
-    matches: 'user',
+    matches: '/user',
     method: 'GET',
     response: {
         name: 'John Doe',
