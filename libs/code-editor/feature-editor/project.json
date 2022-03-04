@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/code-editor/feature-editor",
+  "sourceRoot": "libs/code-editor/feature-editor/src",
+  "prefix": "portfolio",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/code-editor/feature-editor"],
+      "options": {
+        "jestConfig": "libs/code-editor/feature-editor/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/code-editor/feature-editor/src/**/*.ts",
+          "libs/code-editor/feature-editor/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
