@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "code-editor": "apps/code-editor",
+    "code-editor-e2e": "apps/code-editor-e2e",
     "common": "libs/common",
     "data-access-users": "libs/data-access-users",
     "fake-api": "libs/fake-api",

@@ -1,0 +1,28 @@
+{
+  "root": "apps/code-editor-e2e",
+  "sourceRoot": "apps/code-editor-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/code-editor-e2e/cypress.json",
+        "devServerTarget": "code-editor:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "code-editor:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/code-editor-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["code-editor"]
+}

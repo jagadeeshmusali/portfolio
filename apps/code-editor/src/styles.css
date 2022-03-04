@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+.header{
+  display: flex;
+  background-color: currentColor;
+  border: 2px solid #f8f9fa;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  height: 5vh;
+  width: 100%;
+}
+.header h2{
+  margin: auto;
+  color: white;
+}
+.app-ace-editor {
+  border: 2px solid #f8f9fa;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  height: 80vh;
+  width: 100%;
+}
+.output-container{
+  display: flex;
+  flex-direction: row;
+}
+.buttons-container{
+  flex-direction: column;
+  width: auto;
+  padding-right: 0.5rem;
+}
+.output{
+  display: flex;
+  background-color: #23222b;
+  border: 2px solid #f8f9fa;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  height: 15vh;
+  width: 100%;
+}
+
+.output pre{
+  color: white;
+  margin-left: 20px;
+  width: 100%;
+}
