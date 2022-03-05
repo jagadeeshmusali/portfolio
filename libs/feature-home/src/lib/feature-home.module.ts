@@ -8,6 +8,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { SkillComponent } from './components/skills/skill/skill.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { CreativeWorksComponent } from './components/creative-works/creative-works.component';
+import { CreativeWorkComponent } from './components/creative-works/creative-work/creative-work.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -20,7 +22,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
     AboutMeComponent,
     SkillsComponent,
     SkillComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    CreativeWorksComponent,
+    CreativeWorkComponent
   ]
 })
 export class FeatureHomeModule {}
