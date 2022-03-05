@@ -7,7 +7,7 @@ export const profileMock: Profile = {
   },
   "tagLine":"I design and code beautifully simple things, and I love what I do.",
   "greetingMessage":"Hi, I'm Jagadeesh. Nice to meet you.",
-  "aboutMe":"Since beginning my journey as a freelance designer nearly 10 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.",
+  "aboutMe":"Since beginning of my journey as a developer, I learned, mentored and worked happily with most talented people to create best products for business. Always believes in curiosity and continuous hard-work. Proud to day that I learn something daily..",
   "frontEndTechnologies":["Angular","Angularjs","Bootstrap","CSS","HTML","Javascript","Redux","Sass","Webpack"],
   "technologies":{
     "frontEnd":{

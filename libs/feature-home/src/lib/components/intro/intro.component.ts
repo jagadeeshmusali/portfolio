@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 
 @Component({
   selector: 'portfolio-intro',
@@ -6,12 +6,7 @@ import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./intro.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IntroComponent implements OnInit {
-  @Input() tagLine: string = '';
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class IntroComponent {
+  @Input() tagLine = '';
 
 }

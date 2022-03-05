@@ -10,6 +10,8 @@ import { SkillComponent } from './components/skills/skill/skill.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CreativeWorksComponent } from './components/creative-works/creative-works.component';
 import { CreativeWorkComponent } from './components/creative-works/creative-work/creative-work.component';
+import { StartAProjectComponent } from './components/start-a-project/start-a-project.component';
+import { FoooterComponent } from './components/foooter/foooter.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -24,7 +26,9 @@ import { CreativeWorkComponent } from './components/creative-works/creative-work
     SkillComponent,
     ProjectsComponent,
     CreativeWorksComponent,
-    CreativeWorkComponent
+    CreativeWorkComponent,
+    StartAProjectComponent,
+    FoooterComponent
   ]
 })
 export class FeatureHomeModule {}
