@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-/* Personal Website - SCSS version 1.1.5 Copyright 2020, Matt Farley www.mattfarley.ca */
 /*! tinyreset.css v0.1.0 | github.com/shankariyerr/tinyreset */
 @import url("https://use.typekit.net/ojv4ekx.css");
 a, abbr, acronym, address, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, ol, output, p, pre, q, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
@@ -4294,13 +4293,33 @@ input[name="carousel"] { display: none; }
 
 .animate-fadeDown { -webkit-animation: fadeIn 2s, translate-down 0.75s; animation: fadeIn 2s, translate-down 0.75s; }
 
-.app-logo { content: url('./assets/jm-logo1.svg');}
+.app-logo { content: url('./assets/jm-logo1.svg'); }
 
-.coding-logo { content: url('./assets/jm-coding.svg');}
+.coding-logo { content: url('./assets/jm-coding.svg'); }
 
-.avtar-logo { content: url('./assets/jm-avatar.svg');}
+.avtar-logo { content: url('./assets/jm-avatar.svg'); }
 
-.frontend-logo { content: url('./assets/frontend.svg');}
+.frontend-logo { content: url('./assets/frontend.svg'); }
+
+.aeroplane-hanger { content: url('./assets/aeroplane-hanger.png'); }
+
+.flight { content: url('./assets/flight.png'); }
+
+.eaml { content: url('./assets/eaml.jpeg'); }
+
+.fake-api { content: url('./assets/fake-api.png'); }
+
+.ngx-pipes { content: url('./assets/ngx-pipes.png'); }
+
+.auth-handler { content: url('./assets/auth-handler.png'); }
+
+.dependency-injection { content: url('./assets/dependency-injection.png'); }
+
+.lazy-loading { content: url('./assets/lazy-loading.png'); }
+
+.state-management { content: url('./assets/state-management.png'); }
+
+
 
 
 //@-webkit-keyframes "fadeIn" { from { opacity: 0; }

@@ -8,11 +8,17 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { SkillComponent } from './components/skills/skill/skill.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { CreativeWorksComponent } from './components/creative-works/creative-works.component';
+import { CreativeWorkComponent } from './components/creative-works/creative-work/creative-work.component';
+import { StartAProjectComponent } from './components/start-a-project/start-a-project.component';
+import { FoooterComponent } from './components/foooter/foooter.component';
+import {RouterModule} from "@angular/router";
 @NgModule({
-  imports: [
-    CommonModule,
-    PortfolioDataAccessUserModule
-  ],
+    imports: [
+        CommonModule,
+        PortfolioDataAccessUserModule,
+        RouterModule
+    ],
   declarations: [
     HomeComponent,
     IntroComponent,
@@ -20,7 +26,11 @@ import { ProjectsComponent } from './components/projects/projects.component';
     AboutMeComponent,
     SkillsComponent,
     SkillComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    CreativeWorksComponent,
+    CreativeWorkComponent,
+    StartAProjectComponent,
+    FoooterComponent
   ]
 })
 export class FeatureHomeModule {}
