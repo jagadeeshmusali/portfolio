@@ -23,6 +23,9 @@
       "@portfolio/portfolio/data-access-user": [
         "libs/portfolio/data-access-user/src/index.ts"
       ],
+      "@portfolio/portfolio/feature-contact": [
+        "libs/portfolio/feature-contact/src/index.ts"
+      ],
       "ngx-angular-pipes": ["libs/pipes/src/index.ts"],
       "ngx-fake-api": ["libs/fake-api/src/index.ts"]
     }
