@@ -5,11 +5,17 @@ import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import {ACE_CONFIG, AceConfigInterface, AceModule} from 'ngx-ace-wrapper';
 import {CodeEditorFeatureEditorModule} from "@portfolio/code-editor/feature-editor";
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 const DEFAULT_ACE_CONFIG: AceConfigInterface = {
 };
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
-  imports: [AceModule,CodeEditorFeatureEditorModule, BrowserModule],
+  imports: [
+    AceModule,
+    CodeEditorFeatureEditorModule,
+    BrowserModule,
+    TooltipModule.forRoot(),
+  ],
   providers: [
     {
       provide: ACE_CONFIG,

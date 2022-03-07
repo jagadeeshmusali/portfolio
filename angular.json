@@ -1,7 +1,40 @@
 {
   "version": 2,
   "projects": {
-    "code-editor": "apps/code-editor",
+    "code-editor": {
+      "root": "apps/code-editor",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/code-editor",
+            "sourceMap": true,
+            "index": "apps/code-editor/src/index.html",
+            "main": "apps/code-editor/src/main.ts",
+            "polyfills": "apps/code-editor/src/polyfills.ts",
+            "tsConfig": "apps/code-editor/tsconfig.app.json",
+            "assets": [
+              "apps/code-editor/src/favicon.ico",
+              "apps/code-editor/src/assets"
+            ],
+            "styles": [
+              "apps/code-editor/src/styles.css"
+            ],
+            "scripts": ["node_modules/ace-builds/src-noconflict/ace.js",
+              "node_modules/ace-builds/src-noconflict/ext-language_tools.js",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ]
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "code-editor:build"
+          }
+        }
+      }
+    },
     "code-editor-e2e": "apps/code-editor-e2e",
     "code-editor-feature-editor": "libs/code-editor/feature-editor",
     "common": "libs/common",
