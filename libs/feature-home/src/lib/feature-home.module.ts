@@ -13,11 +13,13 @@ import { CreativeWorkComponent } from './components/creative-works/creative-work
 import { StartAProjectComponent } from './components/start-a-project/start-a-project.component';
 import { FoooterComponent } from './components/foooter/foooter.component';
 import {RouterModule} from "@angular/router";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 @NgModule({
     imports: [
         CommonModule,
         PortfolioDataAccessUserModule,
-        RouterModule
+        RouterModule,
+        FontAwesomeModule
     ],
   declarations: [
     HomeComponent,

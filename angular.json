@@ -22,8 +22,7 @@
               "apps/code-editor/src/styles.css"
             ],
             "scripts": ["node_modules/ace-builds/src-noconflict/ace.js",
-              "node_modules/ace-builds/src-noconflict/ext-language_tools.js",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/ace-builds/src-noconflict/ext-language_tools.js"
             ]
           }
         },
