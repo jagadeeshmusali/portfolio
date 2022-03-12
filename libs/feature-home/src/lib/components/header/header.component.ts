@@ -7,5 +7,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
-
+  isActive = false;
+  toggleMenu = () =>  this.isActive = !this.isActive;
+  
 }

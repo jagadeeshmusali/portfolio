@@ -49,9 +49,9 @@ export const profileMock: Profile = {
     {
       "name":"James Walker",
       "designation":"Principal Architect",
-      "company":"American Airlines",
+      "company":"",
       "image":"shane-logo",
-      "testimonial":`Jagadeesh, besides his exceptional skills at programming, has the ability to help and guide people. Can be a great asset to any team.`
+      "testimonial":`Besides his exceptional skills at programming, Jagadeesh has the ability to help and guide people. Can be a great asset to any team.`
     }
   ],
   "roles":["Front-end Developer","Back-end"]
