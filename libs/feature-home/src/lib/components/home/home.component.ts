@@ -5,9 +5,10 @@ import {
   aboutMeSelector,
   greetingMessageSelector,
   tagLineSelector,
-  technologiesSelector
+  technologiesSelector,
+  testimonialsSelector
 } from "@portfolio/portfolio/data-access-user";
-import { Technologies } from '@portfolio/common';
+import { Technologies, Testimonial } from '@portfolio/common';
 
 @Component({
   selector: 'portfolio-home',
@@ -19,5 +20,6 @@ export class HomeComponent {
   greetingMessage$: Observable<string> = this.store.select(greetingMessageSelector);
   aboutMe$: Observable<string> = this.store.select(aboutMeSelector);
   skills$: Observable<Technologies> = this.store.select(technologiesSelector);
+  testimonials$: Observable<Testimonial[]> = this.store.select(testimonialsSelector);
   constructor(private store: Store<any>) { }
 }

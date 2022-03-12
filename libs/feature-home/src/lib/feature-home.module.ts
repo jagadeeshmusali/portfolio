@@ -14,6 +14,8 @@ import { StartAProjectComponent } from './components/start-a-project/start-a-pro
 import { FoooterComponent } from './components/foooter/foooter.component';
 import {RouterModule} from "@angular/router";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { TestimonialComponent } from './components/testimonials/testimonial/testimonial.component';
 @NgModule({
     imports: [
         CommonModule,
@@ -32,7 +34,9 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     CreativeWorksComponent,
     CreativeWorkComponent,
     StartAProjectComponent,
-    FoooterComponent
+    FoooterComponent,
+    TestimonialsComponent,
+    TestimonialComponent
   ]
 })
 export class FeatureHomeModule {}

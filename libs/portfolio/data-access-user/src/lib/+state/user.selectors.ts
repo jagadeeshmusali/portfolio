@@ -36,3 +36,8 @@ export const technologiesSelector = createSelector(
   profileFeature.selectProfile,
   (state) => state.technologies
 );
+
+export const testimonialsSelector = createSelector(
+  profileFeature.selectProfile,
+  (state) => state.testimonials
+);

@@ -4104,7 +4104,7 @@ footer.section.is-small { padding: 0rem 1.5rem 4rem; }
 
 @media screen and (min-width: 769px) { footer.section.is-small { padding: 1rem 1.5rem 4rem; } }
 
-footer .title { font-weight: 300; font-size: 1.6rem; margin: 2rem auto; max-width: 300px; opacity: 0.7; }
+footer .title { font-weight: 300; font-size: 1.6rem; margin: 2rem auto; max-width: 600px; opacity: 0.7; }
 
 @media screen and (min-width: 769px) { footer .title { max-width: 320px; } }
 
@@ -4319,7 +4319,9 @@ input[name="carousel"] { display: none; }
 
 .state-management { content: url('./assets/state-management.png'); }
 
+.anil-logo { content: url('./assets/anil.png'); }
 
+.shane-logo { content: url('./assets/shane.png'); }
 
 
 //@-webkit-keyframes "fadeIn" { from { opacity: 0; }

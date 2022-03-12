@@ -37,6 +37,23 @@ export const profileMock: Profile = {
     },
     "versionControls":["Git","Github","TFS"]
   },
+  "testimonials":[
+    {
+      "name":"Anil Sadu",
+      "designation":"Staff Software Engineer",
+      "company":"OSISoft",
+      "image":"anil-logo",
+      "testimonial":`Jagadeesh is excellent at understanding and coming up with solutions for tricky design scenarios and is a clear communicator. 
+        Always pleasure working with him.`
+    },
+    {
+      "name":"James Walker",
+      "designation":"Principal Architect",
+      "company":"American Airlines",
+      "image":"shane-logo",
+      "testimonial":`Jagadeesh, besides his exceptional skills at programming, has the ability to help and guide people. Can be a great asset to any team.`
+    }
+  ],
   "roles":["Front-end Developer","Back-end"]
 }
 

@@ -1,4 +1,5 @@
 import {Technologies} from "./technologies";
+import { Testimonial } from "./testimonial";
 import {User} from "./user";
 
 export interface Profile {
@@ -8,6 +9,7 @@ export interface Profile {
   aboutMe: string
   frontEndTechnologies: string[]
   technologies: Technologies
+  testimonials: Testimonial[]
   roles: string[]
 }
 
