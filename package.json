@@ -39,6 +39,7 @@
     "express": "4.17.2",
     "mongodb": "^4.3.1",
     "ngx-bootstrap": "^8.0.0",
+    "nodemailer": "^6.7.2",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
