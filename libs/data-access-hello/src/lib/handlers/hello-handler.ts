@@ -18,5 +18,5 @@ export async function sayHello(req: Request, res: Response): Promise<any>{
     await collection.insertOne(hello);
     await client.close();
     await sendEmail(alertEmailId, `Hello from ${hello.name}`, `${hello.message}`);
-    res.status(200).send('Hello ' + hello.name + '! Your message has been sent.');
+    res.status(200).send({'response' : 'Hello ' + hello.name + '! Your message has been sent.'});
   }

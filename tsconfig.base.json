@@ -25,6 +25,9 @@
       "@portfolio/data-access-hello": ["libs/data-access-hello/src/index.ts"],
       "@portfolio/data-access-users": ["libs/data-access-users/src/index.ts"],
       "@portfolio/feature-home": ["libs/feature-home/src/index.ts"],
+      "@portfolio/portfolio/data-access-hello": [
+        "libs/portfolio/data-access-hello/src/index.ts"
+      ],
       "@portfolio/portfolio/data-access-user": [
         "libs/portfolio/data-access-user/src/index.ts"
       ],

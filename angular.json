@@ -91,6 +91,32 @@
     "pipes": "libs/pipes",
     "portfolio": "apps/portfolio",
     "portfolio-api": "apps/portfolio-api",
+    "portfolio-data-access-hello": {
+      "projectType": "library",
+      "root": "libs/portfolio/data-access-hello",
+      "sourceRoot": "libs/portfolio/data-access-hello/src",
+      "prefix": "portfolio",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/portfolio/data-access-hello"],
+          "options": {
+            "jestConfig": "libs/portfolio/data-access-hello/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/portfolio/data-access-hello/src/**/*.ts",
+              "libs/portfolio/data-access-hello/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "portfolio-data-access-user": "libs/portfolio/data-access-user",
     "portfolio-e2e": "apps/portfolio-e2e",
     "portfolio-feature-contact": "libs/portfolio/feature-contact"
