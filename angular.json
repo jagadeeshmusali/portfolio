@@ -4,9 +4,9 @@
     "code-editor": {
       "root": "apps/code-editor",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "executor": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/apps/code-editor",
             "sourceMap": true,
@@ -18,16 +18,15 @@
               "apps/code-editor/src/favicon.ico",
               "apps/code-editor/src/assets"
             ],
-            "styles": [
-              "apps/code-editor/src/styles.css"
-            ],
-            "scripts": ["node_modules/ace-builds/src-noconflict/ace.js",
+            "styles": ["apps/code-editor/src/styles.css"],
+            "scripts": [
+              "node_modules/ace-builds/src-noconflict/ace.js",
               "node_modules/ace-builds/src-noconflict/ext-language_tools.js"
             ]
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "executor": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "code-editor:build"
           }
@@ -37,6 +36,52 @@
     "code-editor-e2e": "apps/code-editor-e2e",
     "code-editor-feature-editor": "libs/code-editor/feature-editor",
     "common": "libs/common",
+    "data-access-email": {
+      "root": "libs/data-access-email",
+      "sourceRoot": "libs/data-access-email/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/data-access-email/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/data-access-email"],
+          "options": {
+            "jestConfig": "libs/data-access-email/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "data-access-hello": {
+      "root": "libs/data-access-hello",
+      "sourceRoot": "libs/data-access-hello/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/data-access-hello/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/data-access-hello"],
+          "options": {
+            "jestConfig": "libs/data-access-hello/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "data-access-users": "libs/data-access-users",
     "fake-api": "libs/fake-api",
     "fake-api-sample": "apps/fake-api-sample",
@@ -46,6 +91,32 @@
     "pipes": "libs/pipes",
     "portfolio": "apps/portfolio",
     "portfolio-api": "apps/portfolio-api",
+    "portfolio-data-access-hello": {
+      "projectType": "library",
+      "root": "libs/portfolio/data-access-hello",
+      "sourceRoot": "libs/portfolio/data-access-hello/src",
+      "prefix": "portfolio",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/portfolio/data-access-hello"],
+          "options": {
+            "jestConfig": "libs/portfolio/data-access-hello/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/portfolio/data-access-hello/src/**/*.ts",
+              "libs/portfolio/data-access-hello/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "portfolio-data-access-user": "libs/portfolio/data-access-user",
     "portfolio-e2e": "apps/portfolio-e2e",
     "portfolio-feature-contact": "libs/portfolio/feature-contact"

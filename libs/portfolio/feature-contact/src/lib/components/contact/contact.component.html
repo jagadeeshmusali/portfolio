@@ -1,4 +1,4 @@
-<body>
+<div>
 <nav class="navbar is-transparent is-planner animate-fadeDown">
   <div class="container">
     <div class="navbar-brand"><a class="navbar-item" href="/">
@@ -37,7 +37,7 @@
             <div class="field">
               <label class="label">Name</label>
               <div class="control is-expanded">
-                <input class="input is-large" name="name" type="text" required="">
+                <input class="input is-large" [(ngModel)]="name" name="name" type="text" required="">
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@
             <div class="field">
               <label class="label">Email</label>
               <div class="control is-expanded">
-                <input class="input is-large" name="email" type="email" required="">
+                <input class="input is-large" [(ngModel)]="email" name="email" type="email" required="">
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@
             <div class="field">
               <label class="label">Message</label>
               <div class="control is-expanded">
-                <textarea class="textarea is-large" name="message" rows="5" required=""></textarea>
+                <textarea class="textarea is-large" [(ngModel)]="message" name="message" rows="5" required=""></textarea>
               </div>
             </div>
             <div class="field is-hidden">
@@ -70,7 +70,7 @@
           <div class="column is-one-third">
             <div class="field">
               <div class="control">
-                <button class="button is-primary is-outlined is-medium is-fullwidth is-rounded" [routerLink]="'/portfolio'"  >Submit</button>
+                <button class="button is-primary is-outlined is-medium is-fullwidth is-rounded" (click)="sayHello()" [disabled]="!name || !email || !message">Submit</button>
               </div>
             </div>
           </div>

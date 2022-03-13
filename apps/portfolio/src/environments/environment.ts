@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'https://portfolio-services.azurewebsites.net/api/',
 };
 
 /*

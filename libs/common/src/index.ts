@@ -4,3 +4,4 @@ export { User } from './lib/models/user';
 export { TechStack } from './lib/models/tech-stack';
 export { Technologies } from './lib/models/technologies';
 export { Testimonial } from './lib/models/testimonial';
+export { Hello } from './lib/models/hello';
