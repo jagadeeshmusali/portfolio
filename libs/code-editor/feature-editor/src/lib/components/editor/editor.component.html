@@ -10,16 +10,14 @@
   </div>
 
   <!--editor-->
-  <div
-    class="app-ace-editor"
-    #editor
-  ></div>
+  <div class="app-ace-editor" #editor></div>
 
   <!--output-->
   <div class="output-container">
     <div class="output">
-      <pre [style.color]="error ? '#ED3966': 'white'">{{codeExecutionResult}}</pre>
+      <pre [style.color]="error ? '#ED3966' : 'white'">{{
+        codeExecutionResult
+      }}</pre>
     </div>
   </div>
-
 </section>

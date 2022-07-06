@@ -9,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'fake-api-sample';
   sampleData: any;
-  constructor(private httpClient: HttpClient){}
+  constructor(private httpClient: HttpClient) {}
   ngOnInit(): void {
-    this.httpClient.get('http://localhost:3000/user').subscribe((data)=>{
+    this.httpClient.get('http://localhost:3000/user').subscribe((data) => {
       this.sampleData = data;
       console.log(data);
-    })
+    });
   }
 }

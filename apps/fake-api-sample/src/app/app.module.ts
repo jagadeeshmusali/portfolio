@@ -13,9 +13,9 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    !environment.production? FakeApiModule.forRoot(FAKE_API_CONFIG): []
+    !environment.production ? FakeApiModule.forRoot(FAKE_API_CONFIG) : [],
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -4,9 +4,9 @@ import { TechStack } from '@portfolio/common';
 @Component({
   selector: 'portfolio-skill',
   templateUrl: './skill.component.html',
-  styleUrls: ['./skill.component.css']
+  styleUrls: ['./skill.component.css'],
 })
-export class SkillComponent{
+export class SkillComponent {
   @Input() skill: TechStack;
   @Input() roleTitle: string;
   @Input() technologiesTitle: string;

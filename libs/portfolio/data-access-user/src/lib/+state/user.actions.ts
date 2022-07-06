@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import {Profile} from "@portfolio/common";
+import { Profile } from '@portfolio/common';
 
 export const getUserProfile = createAction(
   '[User] Get User Profile',

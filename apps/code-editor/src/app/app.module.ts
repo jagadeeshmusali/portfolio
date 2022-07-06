@@ -3,11 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import {ACE_CONFIG, AceConfigInterface, AceModule} from 'ngx-ace-wrapper';
-import {CodeEditorFeatureEditorModule} from "@portfolio/code-editor/feature-editor";
+import { ACE_CONFIG, AceConfigInterface, AceModule } from 'ngx-ace-wrapper';
+import { CodeEditorFeatureEditorModule } from '@portfolio/code-editor/feature-editor';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
-const DEFAULT_ACE_CONFIG: AceConfigInterface = {
-};
+const DEFAULT_ACE_CONFIG: AceConfigInterface = {};
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
@@ -19,8 +18,8 @@ const DEFAULT_ACE_CONFIG: AceConfigInterface = {
   providers: [
     {
       provide: ACE_CONFIG,
-      useValue: DEFAULT_ACE_CONFIG
-    }
+      useValue: DEFAULT_ACE_CONFIG,
+    },
   ],
   bootstrap: [AppComponent],
 })

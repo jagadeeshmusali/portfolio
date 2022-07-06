@@ -1,9 +1,14 @@
 <portfolio-header></portfolio-header>
 <portfolio-intro [tagLine]="tagLine$ | async"></portfolio-intro>
-<portfolio-about-me [aboutMe]="aboutMe$ | async" [greetingMessage]="greetingMessage$ | async"></portfolio-about-me>
+<portfolio-about-me
+  [aboutMe]="aboutMe$ | async"
+  [greetingMessage]="greetingMessage$ | async"
+></portfolio-about-me>
 <portfolio-skills [skills]="skills$ | async"></portfolio-skills>
 <portfolio-projects></portfolio-projects>
 <portfolio-creative-works></portfolio-creative-works>
-<portfolio-testimonials [testimonials]="testimonials$ | async"></portfolio-testimonials>
+<portfolio-testimonials
+  [testimonials]="testimonials$ | async"
+></portfolio-testimonials>
 <!-- <portfolio-start-a-project></portfolio-start-a-project> -->
 <portfolio-foooter></portfolio-foooter>

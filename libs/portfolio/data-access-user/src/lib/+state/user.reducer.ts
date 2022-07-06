@@ -1,17 +1,17 @@
-import {Action, createFeature, createReducer, on} from '@ngrx/store';
+import { Action, createFeature, createReducer, on } from '@ngrx/store';
 import * as UserActions from './user.actions';
-import {Profile} from "@portfolio/common";
-import {profileMock} from "../_mocks/profile.mock";
+import { Profile } from '@portfolio/common';
+import { profileMock } from '../_mocks/profile.mock';
 //TODO: Update lib name to profile
 export interface State {
-  profile: Profile,
-  loading: boolean
+  profile: Profile;
+  loading: boolean;
 }
 
 export const initialState: State = {
   profile: profileMock,
-  loading: false
-}
+  loading: false,
+};
 
 export const profileFeature = createFeature({
   name: 'profile',

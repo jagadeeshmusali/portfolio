@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.header{
+.header {
   display: flex;
   background-color: currentColor;
   border: 2px solid #f8f9fa;
@@ -7,7 +7,7 @@
   height: 5vh;
   width: 100%;
 }
-.header h2{
+.header h2 {
   margin: auto;
   color: white;
 }
@@ -17,16 +17,16 @@
   height: 80vh;
   width: 100%;
 }
-.output-container{
+.output-container {
   display: flex;
   flex-direction: row;
 }
-.buttons-container{
+.buttons-container {
   flex-direction: column;
   width: auto;
   padding-right: 0.5rem;
 }
-.output{
+.output {
   display: flex;
   background-color: #23222b;
   border: 2px solid #f8f9fa;
@@ -35,7 +35,7 @@
   width: 100%;
 }
 
-.output pre{
+.output pre {
   color: white;
   margin-left: 20px;
   width: 100%;

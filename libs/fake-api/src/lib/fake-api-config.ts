@@ -1,9 +1,9 @@
-import { InjectionToken } from "@angular/core";
+import { InjectionToken } from '@angular/core';
 /**
  * @param {FakeApiConfig} config The configuration to use for the fake api
  */
 export interface FakeApiConfig {
-    ApiResponseMappersList: [ ApiResponseMap ];
+  ApiResponseMappersList: [ApiResponseMap];
 }
 /**\
  * @param {string} route The route to match
@@ -13,11 +13,13 @@ export interface FakeApiConfig {
  * @param {string} matches The pattern to match the route against
  */
 export interface ApiResponseMap {
-    route: string;
-    delay?: number;
-    method: string;
-    matches?: string;
-    response: unknown;
+  route: string;
+  delay?: number;
+  method: string;
+  matches?: string;
+  response: unknown;
 }
 
-export const FAKE_API_CONFIG = new InjectionToken<FakeApiConfig>('FakeApiConfig');
+export const FAKE_API_CONFIG = new InjectionToken<FakeApiConfig>(
+  'FakeApiConfig'
+);

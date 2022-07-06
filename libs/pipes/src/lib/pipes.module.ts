@@ -5,13 +5,9 @@ import { BooleanPipesModule } from './pipes/boolean/boolean-pipes.module';
 
 @NgModule({
   imports: [CommonModule],
-  exports: [
-    ArrayPipesModule,
-    BooleanPipesModule
-  ]
+  exports: [ArrayPipesModule, BooleanPipesModule],
 })
 export class PipesModule {}
 
 export * from './pipes/array/array-pipes.module';
 export * from './pipes/boolean/boolean-pipes.module';
-

@@ -7,18 +7,21 @@ import { catchError, map, Observable, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class HelloService {
-    apiBaseUrl: string;
+  apiBaseUrl: string;
 
-    constructor(private http: HttpClient, @Inject('environment') private environment: any) {
-        this.apiBaseUrl = environment.apiUrl;
-     }
+  constructor(
+    private http: HttpClient,
+    @Inject('environment') private environment: any
+  ) {
+    this.apiBaseUrl = environment.apiUrl;
+  }
 
-    sayHello(hello: Hello): Observable<any> {
-        return this.http.post(`${this.apiBaseUrl}hello`, hello);
-    } 
+  sayHello(hello: Hello): Observable<any> {
+    return this.http.post(`${this.apiBaseUrl}hello`, hello);
+  }
 
-    private extractData(res: any) {
-        const body = res;
-        return body;
-    }
+  private extractData(res: any) {
+    const body = res;
+    return body;
+  }
 }

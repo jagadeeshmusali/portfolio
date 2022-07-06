@@ -1,12 +1,12 @@
-import { ApiResponseMap } from "ngx-fake-api";
+import { ApiResponseMap } from 'ngx-fake-api';
 
 export const fakeUsersResponse: ApiResponseMap = {
-    route: '/user',
-    matches: '/user',
-    method: 'GET',
-    response: {
-        name: 'John Doe',
-        email: 'John@gmail.com',
-        phone: '+1-123-456-7890',
-    }
-}
+  route: '/user',
+  matches: '/user',
+  method: 'GET',
+  response: {
+    name: 'John Doe',
+    email: 'John@gmail.com',
+    phone: '+1-123-456-7890',
+  },
+};

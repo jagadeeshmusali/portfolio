@@ -1,10 +1,10 @@
-import {TechStack} from "./tech-stack";
+import { TechStack } from './tech-stack';
 
 export interface Technologies {
-    frontEnd: TechStack
-    backend: TechStack
-    database: TechStack
-    cloud: TechStack
-    mentor: TechStack
-    versionControls: string[]
+  frontEnd: TechStack;
+  backend: TechStack;
+  database: TechStack;
+  cloud: TechStack;
+  mentor: TechStack;
+  versionControls: string[];
 }

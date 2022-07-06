@@ -5,7 +5,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
   selector: 'portfolio-foooter',
   templateUrl: './foooter.component.html',
   styleUrls: ['./foooter.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FoooterComponent {
   faEnvelope = faEnvelope;

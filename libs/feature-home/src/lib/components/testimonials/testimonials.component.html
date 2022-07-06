@@ -1,33 +1,42 @@
-<section class="section testimonials is-medium is-white has-text-centered has-border-top" >
-    <div class="container is-narrow">
-      <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">Testimonials</h1>
-      <h2 class="subtitle is-size-5-desktop">People I've worked with have said some nice things...</h2>
-      <div class="columns is-centered">
-        <div class="column is-two-thirds">
-          <div class="testimonials-slider">                     
-            <input id="carousel-1" type="radio" name="carousel" checked="">
-            <input id="carousel-2" type="radio" name="carousel">
-            <input id="carousel-3" type="radio" name="carousel">
-            <div class="carousel-slides">
-              <div class="carousel-inner">
-                <div class="carousel-item" *ngFor="let testimonial of testimonials">
-                  <portfolio-testimonial 
-                  [name] = "testimonial.name" 
-                  [testimonial]= "testimonial.testimonial"
-                  [designation] = "testimonial.designation"
+<section
+  class="section testimonials is-medium is-white has-text-centered has-border-top"
+>
+  <div class="container is-narrow">
+    <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
+      Testimonials
+    </h1>
+    <h2 class="subtitle is-size-5-desktop">
+      People I've worked with have said some nice things...
+    </h2>
+    <div class="columns is-centered">
+      <div class="column is-two-thirds">
+        <div class="testimonials-slider">
+          <input id="carousel-1" type="radio" name="carousel" checked="" />
+          <input id="carousel-2" type="radio" name="carousel" />
+          <input id="carousel-3" type="radio" name="carousel" />
+          <div class="carousel-slides">
+            <div class="carousel-inner">
+              <div
+                class="carousel-item"
+                *ngFor="let testimonial of testimonials"
+              >
+                <portfolio-testimonial
+                  [name]="testimonial.name"
+                  [testimonial]="testimonial.testimonial"
+                  [designation]="testimonial.designation"
                   [company]="testimonial.company"
-                  [image] = "testimonial.image">
+                  [image]="testimonial.image"
+                >
                 </portfolio-testimonial>
-
-                </div>
               </div>
             </div>
-            <div class="carousel-nav">
-              <label for="carousel-1"></label>
-              <label for="carousel-2"></label>
-            </div>
+          </div>
+          <div class="carousel-nav">
+            <label for="carousel-1"></label>
+            <label for="carousel-2"></label>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

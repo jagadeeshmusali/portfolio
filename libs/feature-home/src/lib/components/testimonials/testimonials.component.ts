@@ -5,7 +5,7 @@ import { Testimonial } from '@portfolio/common';
   selector: 'portfolio-testimonials',
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TestimonialsComponent {
   @Input() testimonials: Testimonial[];

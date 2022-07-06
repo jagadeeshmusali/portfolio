@@ -1,5 +1,5 @@
 export interface TechStack {
-    tagLine: string
-    technologies: string[]
-    devTools: string[]
+  tagLine: string;
+  technologies: string[];
+  devTools: string[];
 }

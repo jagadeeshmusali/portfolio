@@ -1,93 +1,147 @@
 <section class="section is-medium is-primary has-text-centered is-long-ish">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-three-fifths">
-          <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">My Recent Fun Works</h1>
-          <h2 class="subtitle is-size-5-desktop">I’m always curious to know how things work and untangle mysteries to understand more.
-              In the process, I decided it would be fun challenge in designing, building and publishing on my own libraries,
-               web applications and some blogs.</h2>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-three-fifths">
+        <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
+          My Recent Fun Works
+        </h1>
+        <h2 class="subtitle is-size-5-desktop">
+          I’m always curious to know how things work and untangle mysteries to
+          understand more. In the process, I decided it would be fun challenge
+          in designing, building and publishing on my own libraries, web
+          applications and some blogs.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section startups has-text-centered">
+  <div class="container is-narrow">
+    <div class="startup-grid">
+      <div class="columns is-multiline level">
+        <div
+          class="column is-12-mobile is-half-tablet is-one-third-desktop level-item"
+        >
+          <portfolio-creative-work
+            [description]="
+              'Shared Angular library to handle mocking or stubbing of api responses with little configuration.'
+            "
+            [link]="'https://www.npmjs.com/package/ngx-fake-api'"
+            [linkText]="'www.npmjs.com'"
+            [titleImageClass]="'fake-api'"
+            [isDisabled]="false"
+          >
+          </portfolio-creative-work>
+        </div>
+
+        <div
+          class="column is-12-mobile is-half-tablet is-one-third-desktop level-item"
+        >
+          <portfolio-creative-work
+            [description]="
+              'Powerful Angular pipes with no external dependencies and helping in writing a more concise code and readability.'
+            "
+            [link]="'https://www.npmjs.com/package/ngx-fake-api'"
+            [linkText]="'www.npmjs.com'"
+            [titleImageClass]="'ngx-pipes'"
+            [isDisabled]="false"
+          >
+          </portfolio-creative-work>
+        </div>
+
+        <div
+          class="column is-12-mobile is-half-tablet is-one-third-desktop level-item"
+        >
+          <portfolio-creative-work
+            [description]="
+              '.NET Standard library providing useful authentication helpers for authentication flow.'
+            "
+            [link]="''"
+            [linkText]="''"
+            [titleImageClass]="'auth-handler'"
+            [isDisabled]="true"
+          >
+          </portfolio-creative-work>
+        </div>
+
+        <div
+          class="column is-12-mobile is-half-tablet is-one-third-desktop level-item"
+        >
+          <portfolio-creative-work
+            [description]="
+              'Dependency Injection system introduction with its most powerful and standout features.'
+            "
+            [link]="
+              'https://dev.to/jagadeeshmusali/angular-dependency-injection-in-depth-1l8n'
+            "
+            [linkText]="'www.dev.to'"
+            [titleImageClass]="'dependency-injection'"
+            [isDisabled]="false"
+          >
+          </portfolio-creative-work>
+        </div>
+
+        <div
+          class="column is-12-mobile is-half-tablet is-one-third-desktop level-item"
+        >
+          <portfolio-creative-work
+            [description]="
+              'Lazy loading feature modules usages and indepth explination for starters and advanced users.'
+            "
+            [link]="
+              'https://dev.to/jagadeeshmusali/angular-design-pattern-lazy-loading-feature-modules-3hfi'
+            "
+            [linkText]="'www.dev.to'"
+            [titleImageClass]="'lazy-loading'"
+            [isDisabled]="false"
+          >
+          </portfolio-creative-work>
+        </div>
+
+        <div
+          class="column is-12-mobile is-half-tablet is-one-third-desktop level-item"
+        >
+          <portfolio-creative-work
+            [description]="
+              'State management and its life-cycle. Explination on how to configure it and use in applications.'
+            "
+            [link]="
+              'https://dev.to/jagadeeshmusali/angular-ngrx-state-management-lifecycle-simplified-khl'
+            "
+            [linkText]="'www.dev.to'"
+            [titleImageClass]="'state-management'"
+            [isDisabled]="false"
+          >
+          </portfolio-creative-work>
         </div>
       </div>
     </div>
-  </section>
 
-
-  <section class="section startups has-text-centered">
-    <div class="container is-narrow">
-      <div class="startup-grid">
-        <div class="columns is-multiline level">
-          <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
-            <portfolio-creative-work
-                [description]="'Shared Angular library to handle mocking or stubbing of api responses with little configuration.'"
-                [link]="'https://www.npmjs.com/package/ngx-fake-api'"
-                [linkText]="'www.npmjs.com'"
-                [titleImageClass]="'fake-api'"
-                [isDisabled]="false">
-            </portfolio-creative-work>
-          </div>
-
-          <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
-            <portfolio-creative-work
-                [description]="'Powerful Angular pipes with no external dependencies and helping in writing a more concise code and readability.'"
-                [link]="'https://www.npmjs.com/package/ngx-fake-api'"
-                [linkText]="'www.npmjs.com'"
-                [titleImageClass]="'ngx-pipes'"
-                [isDisabled]="false">
-            </portfolio-creative-work>
-          </div>
-
-          <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
-            <portfolio-creative-work
-                [description]="'.NET Standard library providing useful authentication helpers for authentication flow.'"
-                [link]="''"
-                [linkText]="''"
-                [titleImageClass]="'auth-handler'"
-                [isDisabled]="true">
-            </portfolio-creative-work>
-          </div>
-
-          <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
-            <portfolio-creative-work
-                [description]="'Dependency Injection system introduction with its most powerful and standout features.'"
-                [link]="'https://dev.to/jagadeeshmusali/angular-dependency-injection-in-depth-1l8n'"
-                [linkText]="'www.dev.to'"
-                [titleImageClass]="'dependency-injection'"
-                [isDisabled]="false">
-            </portfolio-creative-work>
-          </div>
-
-          <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
-            <portfolio-creative-work
-                [description]="'Lazy loading feature modules usages and indepth explination for starters and advanced users.'"
-                [link]="'https://dev.to/jagadeeshmusali/angular-design-pattern-lazy-loading-feature-modules-3hfi'"
-                [linkText]="'www.dev.to'"
-                [titleImageClass]="'lazy-loading'"
-                [isDisabled]="false">
-            </portfolio-creative-work>
-          </div>
-
-          <div class="column is-12-mobile is-half-tablet is-one-third-desktop level-item">
-            <portfolio-creative-work
-                [description]="'State management and its life-cycle. Explination on how to configure it and use in applications.'"
-                [link]="'https://dev.to/jagadeeshmusali/angular-ngrx-state-management-lifecycle-simplified-khl'"
-                [linkText]="'www.dev.to'"
-                [titleImageClass]="'state-management'"
-                [isDisabled]="false">
-            </portfolio-creative-work>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column"><a class="button is-primary is-outlined is-rounded is-medium" target="_blank"
-                               href="https://github.com/jagadeeshmusali/portfolio/">
-                               <span class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                                  </svg>
-                               </span>
-                               <span>Visit my github profile</span></a></div>
+    <div class="columns is-centered">
+      <div class="column">
+        <a
+          class="button is-primary is-outlined is-rounded is-medium"
+          target="_blank"
+          href="https://github.com/jagadeeshmusali/portfolio/"
+        >
+          <span class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-github"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+          </span>
+          <span>Visit my github profile</span></a
+        >
       </div>
     </div>
-  </section>
+  </div>
+</section>

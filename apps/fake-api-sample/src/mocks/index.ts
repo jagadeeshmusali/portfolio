@@ -5,10 +5,8 @@ import { fakeUsersResponse } from './users-mock';
  */
 
 export const FAKE_API_CONFIG: FakeApiConfig = {
-    /**
-     * @param {[ApiResponseMap]} ApiResponseMappersList The route to match
-     */
-    ApiResponseMappersList: [
-        fakeUsersResponse
-    ]
+  /**
+   * @param {[ApiResponseMap]} ApiResponseMappersList The route to match
+   */
+  ApiResponseMappersList: [fakeUsersResponse],
 };

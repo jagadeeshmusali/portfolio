@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'portfolio-success',
   templateUrl: './success.component.html',
   styleUrls: ['./success.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SuccessComponent {
-}
+export class SuccessComponent {}

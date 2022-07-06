@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   selector: 'portfolio-testimonial',
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TestimonialComponent {
   @Input() testimonial: string;

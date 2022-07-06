@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   selector: 'portfolio-creative-work',
   templateUrl: './creative-work.component.html',
   styleUrls: ['./creative-work.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CreativeWorkComponent {
   @Input() titleImageClass: string;

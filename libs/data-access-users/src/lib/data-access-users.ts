@@ -1,5 +1,5 @@
-import express = require("express");
-import {getUsers, getUsersByName} from "./handlers/users-handler";
+import express = require('express');
+import { getUsers, getUsersByName } from './handlers/users-handler';
 
 export const router = express.Router();
 

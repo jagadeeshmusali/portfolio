@@ -12,11 +12,13 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
  */
 export class FakeApiModule {
   /**
-   * 
+   *
    * @param config The configuration to use for the fake api
    * @return {ModuleWithProviders<FakeApiModule>}
    */
-  public static forRoot(config: FakeApiConfig): ModuleWithProviders<FakeApiModule> {
+  public static forRoot(
+    config: FakeApiConfig
+  ): ModuleWithProviders<FakeApiModule> {
     return {
       ngModule: FakeApiModule,
       providers: [
@@ -28,7 +30,7 @@ export class FakeApiModule {
           provide: HTTP_INTERCEPTORS,
           useClass: FakeBackendHttpInterceptor,
           multi: true,
-        }
+        },
       ],
     };
   }

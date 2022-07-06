@@ -1,7 +1,9 @@
 # fake-api
+
 Shared angular library to handle mocking of api responses
 
 ## Installation
+
 Use `npm` to install the package
 
     npm i ngx-fake-api
@@ -17,27 +19,26 @@ For example: If you would like to mock the following routes:
 
 ```javascript
 export const FAKE_API_CONFIG: FakeApiConfig = {
-    ApiResponseMappersList: [
-        {
-            route: '/user',
-            method: 'GET',
-            response: {
-                name: 'John Doe',
-                email: 'John@gmail.com',
-                phone: '+1-123-456-7890',
-            }
-        },
-        {
-            route: '/employee',
-            matches: 'worker',
-            method: 'GET',
-            response: {
-                name: 'John Smith'
-            }
-        }
-    ]
+  ApiResponseMappersList: [
+    {
+      route: '/user',
+      method: 'GET',
+      response: {
+        name: 'John Doe',
+        email: 'John@gmail.com',
+        phone: '+1-123-456-7890',
+      },
+    },
+    {
+      route: '/employee',
+      matches: 'worker',
+      method: 'GET',
+      response: {
+        name: 'John Smith',
+      },
+    },
+  ],
 };
-
 ```
 
 `route` : The route that you would like to mock
@@ -52,7 +53,6 @@ export const FAKE_API_CONFIG: FakeApiConfig = {
 
 > **Note:** If you dont pass any `match`, the `route` property will be used as the match. For example : `https://domain.com/user/all` will be matched with `route: '/user'`
 
-
 ### 2. Importing the Module:
 
 Import the fake-api module in your angular app.
@@ -62,11 +62,7 @@ import { FakeApiModule } from 'ngx-fake-api';
 import { FAKE_API_CONFIG } from '../mocks';
 
 @NgModule({
-  imports: [
-    ...
-    HttpClientModule,
-    FakeApiModule.forRoot( FAKE_API_CONFIG ),
-  ]
+  imports: [...HttpClientModule, FakeApiModule.forRoot(FAKE_API_CONFIG)],
 })
 export class AppModule {}
 ```
@@ -74,10 +70,10 @@ export class AppModule {}
 If you would like to enable this only in development mode, you can use the following code while importing the module:
 
 ```javascript
-!environment.production? FakeApiModule.forRoot( FAKE_API_CONFIG ) : []
+!environment.production ? FakeApiModule.forRoot(FAKE_API_CONFIG) : [];
 ```
 
-That's it! 
+That's it!
 Now your app will get the mocked data when you make the request.
 
 ## contribution

@@ -8,9 +8,8 @@ describe('CreativeWorkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreativeWorkComponent ]
-    })
-    .compileComponents();
+      declarations: [CreativeWorkComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
