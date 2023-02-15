@@ -4,6 +4,7 @@ export const fakeUsersResponse: ApiResponseMap = {
   route: '/user',
   matches: '/user',
   method: 'GET',
+  disable: false,
   response: {
     name: 'John Doe',
     email: 'John@gmail.com',

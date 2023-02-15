@@ -9,14 +9,15 @@ export interface FakeGraphApiConfig {
  * @param {string} operation The operation to match
  * @param {any} response The response to return
  * @param {number} delay The delay to wait before returning the response
- * @param {boolean} merge Whether to merge the response to the actual response of the api
+ * @param {boolean} disable Whether to disable this mock or not. Defaults to false
  */
 export interface GraphApiResponseMap {
   operation: string;
   delay?: number;
-  response: unknown;
-  merge?: boolean;
+  response: any;
+  disable?: boolean;
 }
+
 
 export const FAKE_GRAPH_API_CONFIG = new InjectionToken<FakeGraphApiConfig>(
   'FakeGraphApiConfig'

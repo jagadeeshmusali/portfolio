@@ -33,23 +33,26 @@ export class FakeGraphBackendHttpInterceptor implements HttpInterceptor {
       (val) => body.operationName == val.operation
     );
     // if there is existing data and append enabled, merge the existing data with the mocked response
-    if (mockedResponse && mockedResponse.merge) {
-      return next.handle(req).pipe(
-        switchMap((event: HttpEvent<any>) => {
-          if (event instanceof HttpResponse && event.status === 200)
-            return of(
-              new HttpResponse({
-                status: event.status,
-                body: { data: { ...event.body.data, ...mockedResponse } },
-              })
-            );
-          return of(event);
-        }),
-        delay(mockedResponse.delay || 0)
-      );
-    }
+    // if (mockedResponse && mockedResponse.merge) {
+    //   return next.handle(req).pipe(
+    //     switchMap((event: HttpEvent<any>) => {
+    //       if (event instanceof HttpResponse && event.status === 200){
+    //         console.log('data from library', { ...event.body.data, ...mockedResponse.response });
+    //         return of(
+    //           new HttpResponse({
+    //             status: event.status,
+    //             body: { data: { ...event.body.data, ...mockedResponse.response } },
+    //           })
+    //         );
+    //       }
+    //
+    //       return of(event);
+    //     }),
+    //     delay(mockedResponse.delay || 0)
+    //   );
+    // }
     // if there is existing mocked response, return it
-    if (mockedResponse) {
+    if (mockedResponse && !mockedResponse.disable) {
       return of(
         new HttpResponse({
           status: 200,

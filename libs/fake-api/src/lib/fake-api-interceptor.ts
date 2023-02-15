@@ -30,7 +30,7 @@ export class FakeBackendHttpInterceptor implements HttpInterceptor {
         : url.includes(val.route);
       return matchType && method == val.method;
     });
-    if (mockedResponse) {
+    if (mockedResponse && !mockedResponse.disable) {
       return of(
         new HttpResponse({
           status: 200,

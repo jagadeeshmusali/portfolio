@@ -1,6 +1,6 @@
 {
   "name": "ngx-fake-api",
-  "version": "1.0.34",
+  "version": "1.0.40",
   "license": "MIT",
   "description": "Fake API for Angular applications",
   "repository": {

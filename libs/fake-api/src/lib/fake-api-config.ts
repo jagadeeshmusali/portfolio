@@ -11,6 +11,7 @@ export interface FakeApiConfig {
  * @param {any} response The response to return
  * @param {number} delay The delay to wait before returning the response
  * @param {string} matches The pattern to match the route against
+ * @param {boolean} disable Whether to disable this mock or not. Defaults to false
  */
 export interface ApiResponseMap {
   route: string;
@@ -18,6 +19,7 @@ export interface ApiResponseMap {
   method: string;
   matches?: string;
   response: unknown;
+  disable?: boolean;
 }
 
 export const FAKE_API_CONFIG = new InjectionToken<FakeApiConfig>(
