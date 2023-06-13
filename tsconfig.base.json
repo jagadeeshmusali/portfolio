@@ -35,7 +35,8 @@
         "libs/portfolio/feature-contact/src/index.ts"
       ],
       "ngx-angular-pipes": ["libs/pipes/src/index.ts"],
-      "ngx-fake-api": ["libs/fake-api/src/index.ts"]
+      "ngx-fake-api": ["libs/fake-api/src/index.ts"],
+      "ngx-rxjs-extensions": ["libs/rxjs-extensions/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
