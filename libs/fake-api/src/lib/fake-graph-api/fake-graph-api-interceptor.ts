@@ -60,7 +60,6 @@ export class FakeGraphBackendHttpInterceptor implements HttpInterceptor {
         })
       ).pipe(delay(mockedResponse.delay || 0));
     }
-    // if there is no mocked response, return the server response
     return next.handle(req);
   }
 }

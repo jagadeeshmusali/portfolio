@@ -8,7 +8,8 @@ Use `npm` to install the package
 
     npm i ngx-fake-api
 
-# Usage:
+# Usage 
+###For REST API
 
 ### 1. Prepare fake data:
 
@@ -75,6 +76,8 @@ If you would like to enable this only in development mode, you can use the follo
 
 That's it!
 Now your app will get the mocked data when you make the request.
+
+### For GraphQL
 
 ## contribution
 
