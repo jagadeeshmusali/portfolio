@@ -3,11 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {
   debug,
   every,
-  filterKey,
   filterKeys,
   pageHidden$,
   pageVisible$,
-  poll, some,
+  poll, retryWithBackoff, some,
   visibilityChange$
 } from "ngx-rxjs-extensions";
 import {BehaviorSubject, combineLatest, from, fromEvent, map, Observable, of} from "rxjs";
@@ -25,6 +24,7 @@ export class AppComponent implements OnInit {
     this.httpClient.get('http://localhost:3000/user')
       .pipe(
         poll(10000),
+        retryWithBackoff(1000, 10000, 3),
       )
       .subscribe((data) => {
       this.sampleData = data;
@@ -48,6 +48,7 @@ export class AppComponent implements OnInit {
       conditionC$,
     ]).pipe(
       every(),
+      some(),
     )
       .subscribe((val) => {
         console.log('EVERY', val)

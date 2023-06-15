@@ -1,5 +1,23 @@
 import {MonoTypeOperatorFunction, tap} from "rxjs";
 
+/**
+ * Custom RxJS operator that logs the next, error and complete events for debugging purposes
+ * @param {string} tag The tag to use for the log messages. Defaults to 'Debug'.
+ * @returns {(source: Observable<T>) => Observable<T>} The operator function to be applied to the source observable.
+ * @example
+ * of(1, 2, 3).pipe(debug('MyTag')).subscribe()
+ * // [MyTag: Next] 1
+ * // [MyTag: Next] 2
+ * // [MyTag: Next] 3
+ * // [MyTag]: Complete
+ * @example
+ * of(1, 2, 3).pipe(debug()).subscribe()
+ * // [Debug: Next] 1
+ * // [Debug: Next] 2
+ * // [Debug: Next] 3
+ * // [Debug]: Complete
+ */
+
 export function debug(tag: string = 'Debug'): MonoTypeOperatorFunction<any> {
   return tap({
     next(value) {

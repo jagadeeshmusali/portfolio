@@ -3,7 +3,13 @@ import { mergeMap, retryWhen, takeWhile } from 'rxjs/operators';
 
 /**
  * Custom RxJS operator that retries the source observable with an increasing delay based on a backoff strategy.
- *
+ * ```typescript
+ * this.httpClient.get('url')
+ * .pipe(retryWithBackoff(3, 1000, 3))
+ * .subscribe((response) => {
+ *  // Do something with the response
+ *  });
+ *  ```
  * @template T The type of values emitted by the source observable.
  * @param {number} maxRetry The maximum number of retry attempts. If not specified, defaults to 3.
  * @param {number} initialDelay The initial delay before the first retry in milliseconds. If not specified, defaults to 1000.
