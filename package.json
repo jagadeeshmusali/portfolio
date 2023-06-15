@@ -20,6 +20,7 @@
     "build:pipes": "nx build pipes --configuration=production",
     "build:portfolio": "nx build portfolio",
     "build:fake-api": "nx build fake-api --configuration=production",
+    "build:rxjs-extensions": "nx build rxjs-extensions --configuration=production",
     "test": "nx test"
   },
   "private": true,
