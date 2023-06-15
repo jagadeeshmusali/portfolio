@@ -7,7 +7,7 @@ import {
   pageHidden$,
   pageVisible$,
   poll, retryWithBackoff, some,
-  visibilityChange$
+  visibilityChange$, whenPageVisible
 } from "ngx-rxjs-extensions";
 import {BehaviorSubject, combineLatest, from, fromEvent, map, Observable, of} from "rxjs";
 
@@ -24,11 +24,12 @@ export class AppComponent implements OnInit {
     this.httpClient.get('http://localhost:3000/user')
       .pipe(
         poll(10000),
-        retryWithBackoff(1000, 10000, 3),
+        whenPageVisible(),
+        // retryWithBackoff(1000, 10000, 3),
       )
       .subscribe((data) => {
       this.sampleData = data;
-      console.log(data);
+      console.log(`data refreshed at ${Date.now()}: `,data);
     });
     fromEvent(document, 'keyup')
       .pipe(
