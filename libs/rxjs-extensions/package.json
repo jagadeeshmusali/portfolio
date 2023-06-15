@@ -1,6 +1,6 @@
 {
   "name": "ngx-rxjs-extensions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "RxJS extensions for Angular",
   "repository": {
