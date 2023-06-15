@@ -3,7 +3,7 @@
 Shared library providing extensions to RxJS.
 
 
-## Installation
+# Installation
 
 Use `npm` to install the package
 
@@ -12,18 +12,22 @@ Use `npm` to install the package
 # Operators and Usage:
 
 ### 1. When Page Visible: `whenPageVisible`
-Custom RxJS operator that unsubscribes from the source observable when the page is hidden.
-When the page becomes visible again, the operator will resubscribe to the source observable.
+Custom RxJS operator that unsubscribes from the source observable when the page is hidden(Minimized window or moved away from current tab).
+When the page becomes visible again(Maximized window or back to application tab), the operator will resubscribe to the source observable.
 Useful for polling observables that should only be active when the page is visible.
-A typical example might be user notifications, alerts, or to verify that the current user session hasn’t expired.
+A typical example might be user notifications, alerts, or to verify that the current user session hasn’t expired when user back to the application tab.
 > **Note:** We should always strive to interrupt the server as little as possible so that it is able serve other users more efficiently. This operators helps the case.
 
 ```javascript
 import { whenPageVisible } from 'ngx-rxjs-extensions';
-import {fromEvent} from "rxjs";
+import { poll } from 'ngx-rxjs-extensions';
+import { fromEvent } from "rxjs";
 
 this.httpClient.get('url')
-  .pipe(whenPageVisible())
+  .pipe(
+      poll(10000),
+      whenPageVisible()
+  )
   .subscribe(response => {
       // Val will be the response from the server when the page is visible.
       // The observable will be unsubscribed when the page is hidden.
@@ -72,7 +76,118 @@ this.httpClient.get('url')
 
 `backoffFactor` : The factor by which the delay increases for each subsequent retry. If not specified, defaults to 3.
 
-### 4. Page Visibility Change: `visibilityChange$`
+
+
+### 4. Debug: `debug`
+
+Custom operator to log the values emitted by the observable.
+Helpful when you want to debug the values emitted by the observable.
+
+```javascript
+import { debug } from 'ngx-rxjs-extensions';
+
+of(1, 2, 3)
+  .pipe(debug())
+  .subscribe()
+
+// [Debug: Next] 1
+// [Debug: Next] 2
+// [Debug: Next] 3
+// [Debug]: Complete
+```
+
+> **Note:** If you would like to see custom tag in the console, you can pass the `tag` as an argument to the `debug` operator. For eg: `debug('sampleTagName')`
+
+### 5. Every: `every`
+
+Custom RxJS operator that returns if all input observables are truthy.
+Helpful for scenarios when you want to execute a function only when all the observables are truthy.
+
+```javascript
+import { every } from 'ngx-rxjs-extensions';
+import { combineLatest } from "rxjs";
+
+combineLatest([observableA$, observableB$, observableC$])
+  .pipe(every())
+  .subscribe(([valA, valB, valC]) => {
+      // Do something when all conditions are truthy
+  });
+```
+
+> **Note:** `combineLatest` is used just for the example. You can use any operator that emits multiple values and then pipe the `every` operator.
+
+
+### 6. Some: `some`
+
+Custom RxJS operator that returns if any of the input observables are truthy.
+Helpful for scenarios when you want to execute a function only when any of the observables are truthy.
+
+```javascript
+import { some } from 'ngx-rxjs-extensions';
+import { combineLatest } from "rxjs";
+
+combineLatest([observableA$, observableB$, observableC$])
+  .pipe(some())
+  .subscribe(([valA, valB, valC]) => {
+      // Do something if any conditions are true
+  });
+```
+> **Note:** `combineLatest` is used just for the example. You can use any operator that emits multiple values and thn pipe the `some` operator.
+
+### 7. None: `none`
+
+Custom RxJS operator that returns if all input observables are falsy.
+
+```javascript
+import { some } from 'ngx-rxjs-extensions';
+import { combineLatest } from "rxjs";
+
+combineLatest([observableA$, observableB$, observableC$])
+  .pipe(none())
+  .subscribe(([valA, valB, valC]) => {
+      // Do something if any conditions are falsy
+  });
+```
+> **Note:** `combineLatest` is used just for the example. You can use any operator that emits multiple values and thn pipe the `none` operator.
+
+
+### 8. FilterNil: `filterNil`
+
+Custom RxJS operator that filters out `null` and `undefined` values from the stream.
+
+```javascript
+import { filterNil } from 'ngx-rxjs-extensions';
+import { of } from "rxjs";
+
+of(1, 2, 3, null, undefined)
+  .pipe(filterNil())
+  .subscribe(val => {
+      // val will be 1, 2, 3
+  });
+
+```
+> **Note:** `of` is used just for the example. You can use any operator that emits multiple values and thn pipe the `filterNil` operator.
+
+### 9. Filter Keyboard Events: `filterKeys`
+
+Custom RxJS operator that filters out keyboard events based on the key code.
+
+Current implementation supports filtering for `ArrowDown`, `ArrowUp`, `ArrowLeft`, `ArrowRight`, `Enter`, `Escape`, `Space`, `Tab`;
+```javascript
+import { filterNil } from 'ngx-rxjs-extensions';
+import { fromEvent } from "rxjs";
+
+fromEvent(document, 'keydown')
+  .pipe(filterKeys('ArrowDown', 'ArrowUp'))
+  .subscribe(val => {
+      // val will be the keyboard event for ArrowDown and ArrowUp
+  });
+
+```
+> **Note:** `fromEvent` is used just for the example. You can use any operator that emits multiple values and thn pipe the `filterKeys` operator.
+
+
+### 10. Page Visibility Change: `visibilityChange$`
 
 `Observable` that emits when the page is `visible` or `hidden`.
 
@@ -93,7 +208,7 @@ visibilityChange$.subscribe((event) => {
 });
 ```
 
-### 5. Page Visible: `pageVisible$`
+### 11. Page Visible: `pageVisible$`
 
 `Observable` that emits when the page is `visible`.
 
@@ -110,7 +225,7 @@ pageVisible$.subscribe((event) => {
 });
 ```
 
-### 6. Page Hidden: `pageHidden$`
+### 12. Page Hidden: `pageHidden$`
 
 `Observable` that emits when the page is `hidden`.
 
@@ -125,115 +240,6 @@ pageVisible$.subscribe((event) => {
   // Perform actions when the page becomes visible
 });
 ```
-
-### 7. Debug: `debug`
-
-Custom operator to log the values emitted by the observable.
-Helpful when you want to debug the values emitted by the observable.
-
-```javascript
-import { debug } from 'ngx-rxjs-extensions';
-
-of(1, 2, 3)
-  .pipe(debug())
-  .subscribe()
-});
-// [Debug: Next] 1
-// [Debug: Next] 2
-// [Debug: Next] 3
-// [Debug]: Complete
-```
-
-> **Note:** If you would like to see custom tag in the console, you can pass the `tag` as an argument to the `debug` operator. For eg: `debug('sampleTagName')`
-
-### 8. Every: `every`
-
-Custom RxJS operator that returns if all input observables are truthy.
-Helpful for scenarios when you want to execute a function only when all the observables are truthy.
-
-```javascript
-import { every } from 'ngx-rxjs-extensions';
-import {combineLatest} from "rxjs";
-
-combineLatest([observableA$, observableB$, observableC$])
-  .pipe(every())
-  .subscribe(([valA, valB, valC]) => {
-      // Do something when all conditions are truthy
-  });
-```
-
-> **Note:** `combineLatest` is used just for the example. You can use any operator that emits multiple values and thn pipe the `every` operator.
-
-
-### 9. Some: `some`
-
-Custom RxJS operator that returns if any of the input observables are truthy.
-Helpful for scenarios when you want to execute a function only when any of the observables are truthy.
-
-```javascript
-import { some } from 'ngx-rxjs-extensions';
-import {combineLatest} from "rxjs";
-
-combineLatest([observableA$, observableB$, observableC$])
-  .pipe(some())
-  .subscribe(([valA, valB, valC]) => {
-      // Do something if any conditions are true
-  });
-```
-> **Note:** `combineLatest` is used just for the example. You can use any operator that emits multiple values and thn pipe the `some` operator.
-
-### 10. None: `none`
-
-Custom RxJS operator that returns if all input observables are falsy.
-
-```javascript
-import { some } from 'ngx-rxjs-extensions';
-import {combineLatest} from "rxjs";
-
-combineLatest([observableA$, observableB$, observableC$])
-  .pipe(none())
-  .subscribe(([valA, valB, valC]) => {
-      // Do something if any conditions are falsy
-  });
-```
-> **Note:** `combineLatest` is used just for the example. You can use any operator that emits multiple values and thn pipe the `none` operator.
-
-
-### 11. FilterNil: `filterNil`
-
-Custom RxJS operator that filters out `null` and `undefined` values from the stream.
-
-```javascript
-import { filterNil } from 'ngx-rxjs-extensions';
-import {of} from "rxjs";
-
-of(1, 2, 3, null, undefined)
-  .pipe(filterNil())
-  .subscribe(val => {
-      // val will be 1, 2, 3
-  });
-
-```
-> **Note:** `of` is used just for the example. You can use any operator that emits multiple values and thn pipe the `filterNil` operator.
-
-### 12. Filter Keyboard Events: `filterKeys`
-
-Custom RxJS operator that filters out keyboard events based on the key code.
-
-Current implementation supports filtering for `ArrowDown`, `ArrowUp`, `ArrowLeft`, `ArrowRight`, `Enter`, `Escape`, `Space`, `Tab`;
-```javascript
-import { filterNil } from 'ngx-rxjs-extensions';
-import {fromEvent} from "rxjs";
-
-fromEvent(document, 'keydown')
-  .pipe(filterKeys('ArrowDown', 'ArrowUp'))
-  .subscribe(val => {
-      // val will be the keyboard event for ArrowDown and ArrowUp
-  });
-
-```
-> **Note:** `fromEvent` is used just for the example. You can use any operator that emits multiple values and thn pipe the `filterKeys` operator.
-
 
 
 ## contribution
