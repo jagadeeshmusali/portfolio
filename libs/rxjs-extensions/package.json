@@ -1,0 +1,14 @@
+{
+  "name": "ngx-rxjs-extensions",
+  "version": "1.0.2",
+  "license": "MIT",
+  "description": "RxJS extensions for Angular",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jagadeeshmusali/portfolio.git",
+    "directory": "libs/rxjs-extensions"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

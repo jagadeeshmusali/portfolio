@@ -119,6 +119,48 @@
     },
     "portfolio-data-access-user": "libs/portfolio/data-access-user",
     "portfolio-e2e": "apps/portfolio-e2e",
-    "portfolio-feature-contact": "libs/portfolio/feature-contact"
+    "portfolio-feature-contact": "libs/portfolio/feature-contact",
+    "rxjs-extensions": {
+      "projectType": "library",
+      "root": "libs/rxjs-extensions",
+      "sourceRoot": "libs/rxjs-extensions/src",
+      "prefix": "portfolio",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "outputs": ["dist/libs/rxjs-extensions"],
+          "options": {
+            "project": "libs/rxjs-extensions/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/rxjs-extensions/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/rxjs-extensions/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/rxjs-extensions"],
+          "options": {
+            "jestConfig": "libs/rxjs-extensions/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/rxjs-extensions/src/**/*.ts",
+              "libs/rxjs-extensions/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    }
   }
 }
