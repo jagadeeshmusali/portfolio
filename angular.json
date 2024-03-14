@@ -1,6 +1,40 @@
 {
   "version": 2,
   "projects": {
+    "azure-eventhub-utilities": {
+      "root": "libs/azure-eventhub-utilities",
+      "sourceRoot": "libs/azure-eventhub-utilities/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/azure-eventhub-utilities/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/azure-eventhub-utilities"],
+          "options": {
+            "jestConfig": "libs/azure-eventhub-utilities/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/azure-eventhub-utilities",
+            "tsConfig": "libs/azure-eventhub-utilities/tsconfig.lib.json",
+            "packageJson": "libs/azure-eventhub-utilities/package.json",
+            "main": "libs/azure-eventhub-utilities/src/index.ts",
+            "assets": ["libs/azure-eventhub-utilities/*.md"]
+          }
+        }
+      },
+      "tags": []
+    },
     "code-editor": {
       "root": "apps/code-editor",
       "projectType": "application",

@@ -17,6 +17,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@azure/azure-eventhub-utilities": [
+        "libs/azure-eventhub-utilities/src/index.ts"
+      ],
       "@portfolio/code-editor/feature-editor": [
         "libs/code-editor/feature-editor/src/index.ts"
       ],

@@ -51,13 +51,16 @@ Run `nx g @nrwl/node my-new-library` to generate a node library.
 
 Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
+## Generate a buildable library to publish to npm
+Run `nx g @nrwl/node:lib azure-eventhub-utilities --publishable --importPath="@azure/azure-eventhub-utilities"`
+
 > You can also use any of the plugins above to generate libraries as well.
 
 Libraries are shareable across libraries and applications. They can be imported from `@portfolio/mylib`.
 
 ## Development server
 
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app wiazurll automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
